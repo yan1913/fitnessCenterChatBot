@@ -1,37 +1,39 @@
 from nltk import word_tokenize
 import random
 
-# 打招呼
+# Hello
 greetings = ['hola', 'hello', 'hi', 'Hi', 'hey!','hey']
-# 回复打招呼
+# GreetingAns
 random_greeting = random.choice(greetings)
 
-# 对于“假期”的话题关键词
+# Topic anout "holiday"
 question = ['break','holiday','vacation','weekend']
-# 回复假期话题
+# Holiday Ans
 responses = ['It was nice! I went to Paris',"Sadly, I just stayed at home"]
-# 随机选一个回
+# random ans
 random_response = random.choice(responses)
 
 
 
-# 机器人跑起来
+# run
 while True:
     userInput = input(">>> ")
+    #clean the input and chouse the key word
     # 清理一下输入，看看都有哪些词
     cleaned_input = word_tokenize(userInput)
-    # 这里，我们比较一下关键词，确定他属于哪个问题
+    #这里，我们比较一下关键词，确定他属于哪个问题
+    # compare the keywords to determine which problem they belong to
     if  not set(cleaned_input).isdisjoint(greetings):
         print(random_greeting)
     elif not set(cleaned_input).isdisjoint(question):
         print(random_response)
-    # 除非你说“拜拜”
+    # Quit condition
     elif userInput == 'bye':
         break
     else:
         print("I did not understand what you said")
 
-
+#output
 # >>> hi
 # hey
 # >>> how was your holiday?
