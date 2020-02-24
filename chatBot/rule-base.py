@@ -2,22 +2,22 @@ import random
 # greeting
 greetings = ['hola', 'hello', 'hi', 'Hi', 'hey!','hey']
 # 回复打招呼
-random_greeting = random.choice(greetings)
+# random_greeting = random.choice(greetings)
 
 # 对于“你怎么样？”这个问题的回复
 question = ['How are you?','How are you doing?']
 # “我很好”
-responses = ['Okay',"I'm fine"]
+responses = ['Okay',"I'm fine","Good.","Not bad.","Actually,not very good."]
 # 随机选一个回
-random_response = random.choice(responses)
+# random_response = random.choice(responses)
 
 # 机器人跑起来
 while True:
     userInput = input(">>> ")
     if userInput in greetings:
-        print(random_greeting)
+        print(random.choice(greetings))
     elif userInput in question:
-        print(random_response)
+        print(random.choice(responses))
     # 除非你说“拜拜”
     elif userInput == 'bye':
         break

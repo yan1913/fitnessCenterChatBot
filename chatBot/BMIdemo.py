@@ -16,11 +16,16 @@ def fun(BMI):
     else:
         return "Obese Class III (Very severely obese)	"
 
+
 def calBMI(height, weight):
     BMI = weight / (height * height)
     return BMI
 
-height = float(input("Enter your height:"))
-weight = float(input("Enter your weight:"))
-BMI = float(calBMI(height, weight))
-print(fun(BMI))
+
+while True:
+    height = float(input("Enter your height(meter):"))
+    weight = float(input("Enter your weight(kg):"))
+    BMI = float(calBMI(height, weight))
+    print("BMI:",BMI)
+    print(fun(BMI))
+    print("============================================")
