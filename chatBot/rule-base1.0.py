@@ -9,7 +9,7 @@ greetings = ['hola', 'hello', 'hi', 'Hi', 'hey!','hey']
 # 对于“假期”的话题关键词
 questionHoliday = ['break','holiday','vacation','weekend']
 # 回复假期话题
-responsesHoliday = ['It was nice! I went to Paris',"Sadly, I just stayed at home"]
+responsesHoliday = ['It was nice! I went to Paris',"Sadly, I just stayed at home",]
 # 随机选一个回
 # random_response = random.choice(responses)
 # questionHoliday = ['Fitness','suggest','advice','advices',"opinion","suggests"]

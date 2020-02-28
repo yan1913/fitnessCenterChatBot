@@ -14,13 +14,17 @@ def login():
     return
 
 
-def BookSportHall():
+def bookSportHall():
     # if the user is the member and login successful, then can run this function to book the sport hall.
     # also can search the sport hall state(available or not)
     return
 
 
-def fitnessSuggestion():
+def calBMI():
+    return
+
+
+def fitnessSuggestion(BMI,):
     # costumer can get the personal fitnessSuggestion from this function
     return
 
@@ -30,5 +34,7 @@ def groupExerciseClasses():
     return
 
 
-def BookPhysiotherapy():
+def bookPhysiotherapy():
     return
+
+BMI=calBMI()
