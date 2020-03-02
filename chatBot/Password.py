@@ -14,6 +14,7 @@ import re
 
 def check_password_validity(user_input):
     # Condition 1
+
     if len(re.findall(r'[a-z]', user_input)) < 2:
         print("Not Valid! The password should contain at least two characters of a-z")
         return False
