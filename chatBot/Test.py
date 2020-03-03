@@ -11,10 +11,6 @@ while True:
         print(random.choice(Greeting.greetingAns))
     elif not set(cleaned_input).isdisjoint(Greeting.questionHoliday):
         print(random.choice(Greeting.responsesHoliday))
-    elif not set(cleaned_input).isdisjoint(Greeting.content):
-        print("=====mainMenu=====")
-        print("1.fitness suggestion")
-        print("2.sport booking")
     elif not set(cleaned_input).isdisjoint(Greeting.questionRegister):
         print("=========REGISTER=========")
         userName = input("Enter your Username:")
@@ -23,8 +19,8 @@ while True:
         age = input("How old are you:")
         weight = float(input("please enter your weight(kg):"))
         height = float(input("please enter your height:"))
+
         member = ManageAccount(userName, password, gander, age, weight, height)
-        calculateBMI = BMIdemo
         print("==============your detail==============")
         print('username:', member.username)
         print('gander:', member.gander)
@@ -35,13 +31,21 @@ while True:
         res = input("Do you want to calculate your BMI and your health condition(yes/no):")
         if res == "yes":
             print("Your health result")
-            BMI = BMIdemo.calBMI(member.weight, member.height)
+            BMI=BMIdemo.calBMI(weight,height)
             print("BMI:", BMI)
             print(BMIdemo.fun(BMI))
             print("=======================================")
-            print("Do you need fitness advice)")
-
+            print(random.choice(Greeting.greetingAns))
         else:
-            print("Thank you, have a good day.")
-            break
-
+            print(random.choice(Greeting.greetingAns))
+    elif not set(cleaned_input).isdisjoint(Greeting.questionLogin):
+        print("RUN THE LOGIN FUNCTION ON HEAR")
+        # if loginFunction==True:
+    elif not set(cleaned_input).isdisjoint(Greeting.questionSuggestion):
+            print("RUN THE FITNESS SUGGESTION FUNCTION ON HEAR")
+        # "REGISTER OR LOGIN AGAIN"
+    elif userInput=="bye" or userInput=="no":
+        print("Thank you for using it.Have a good day")
+        break
+    else:
+        print("Sorry, I don't understand.")
