@@ -1,5 +1,6 @@
+from chatBot import Password
 
-class ManageAccount():
+class ManageAccount:
     def __init__(self, userName, password, gander, age, weight, height):
         self._userName = userName
         self.password = password
@@ -24,7 +25,13 @@ class ManageAccount():
 
     @password.setter
     def password(self, password):
-        self._password = password
+        res = Password.check_password_validity(password)
+        if res == False:
+            print(res)
+            rest = input("please reset the password ")
+            self._password = rest
+        else:
+            self._password = res
 
     @property
     def gender(self):
@@ -58,4 +65,18 @@ class ManageAccount():
     def height(self, height):
         self._height = height
 
-
+# print("=========REGISTER=========")
+# userName = input("Enter your Username:")
+# password = input("Enter your password:")
+# gander = input("What is your gender:")
+# age = input("How old are you:")
+# weight = float(input("please enter your weight(kg):"))
+# height = float(input("please enter your height:"))
+#
+# member = ManageAccount(userName, password, gander, age, weight, height)
+# print("==============your detail==============")
+# print('username:', member.username)
+# print('gander:', member.gander)
+# print('age:', member.age)
+# print('weight:', member.weight)
+# print('height:', member.height)
