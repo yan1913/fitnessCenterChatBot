@@ -65,18 +65,7 @@ class ManageAccount:
     def height(self, height):
         self._height = height
 
-# print("=========REGISTER=========")
-# userName = input("Enter your Username:")
-# password = input("Enter your password:")
-# gander = input("What is your gender:")
-# age = input("How old are you:")
-# weight = float(input("please enter your weight(kg):"))
-# height = float(input("please enter your height:"))
-#
-# member = ManageAccount(userName, password, gander, age, weight, height)
-# print("==============your detail==============")
-# print('username:', member.username)
-# print('gander:', member.gander)
-# print('age:', member.age)
-# print('weight:', member.weight)
-# print('height:', member.height)
+
+
+
+

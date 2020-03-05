@@ -5,6 +5,8 @@ responsesHoliday = ['It was nice! I went to Paris', "Sadly, I just stayed at hom
 questionRegister = ["new user","Register","register", "join in","new member"]
 questionSuggestion=["fitness suggestion","Fitness suggestion","advice","suggestion","health suggestion"]
 questionLogin=["login","Login","log in","Log in","sing in", "Sing in", "Sing"]
+questionWeather=["weather","Weather"]
+questionTime=["Time","time"]
 
     # 机器人跑起来
 

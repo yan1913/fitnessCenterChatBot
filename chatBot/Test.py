@@ -1,7 +1,11 @@
 from chatBot import BMIdemo
+from chatBot import Register
 from chatBot.Register import ManageAccount
 from chatBot import Greeting
+from chatBot import Weather
+from chatBot import Time
 from nltk import word_tokenize
+
 import random
 
 while True:
@@ -12,6 +16,7 @@ while True:
     elif not set(cleaned_input).isdisjoint(Greeting.questionHoliday):
         print(random.choice(Greeting.responsesHoliday))
     elif not set(cleaned_input).isdisjoint(Greeting.questionRegister):
+
         print("=========REGISTER=========")
         userName = input("Enter your Username:")
         password = input("Enter your password:")
@@ -31,7 +36,7 @@ while True:
         res = input("Do you want to calculate your BMI and your health condition(yes/no):")
         if res == "yes":
             print("Your health result")
-            BMI=BMIdemo.calBMI(weight,height)
+            BMI=BMIdemo.calBMI()
             print("BMI:", BMI)
             print(BMIdemo.fun(BMI))
             print("=======================================")
@@ -44,8 +49,13 @@ while True:
     elif not set(cleaned_input).isdisjoint(Greeting.questionSuggestion):
             print("RUN THE FITNESS SUGGESTION FUNCTION ON HEAR")
         # "REGISTER OR LOGIN AGAIN"
+    elif not set(cleaned_input).isdisjoint(Greeting.questionWeather):
+        Weather.searchWeather()
+    elif not set(cleaned_input).isdisjoint(Greeting.questionTime):
+        Time.localTime()
     elif userInput=="bye" or userInput=="no":
         print("Thank you for using it.Have a good day")
         break
+
     else:
         print("Sorry, I don't understand.")
