@@ -8,7 +8,6 @@ class ManageAccount:
         self.age = age
         self.weight = weight
         self.height = height
-
     # get username
     @property
     def userName(self):

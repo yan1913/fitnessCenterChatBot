@@ -4,10 +4,9 @@ from chatBot.Register import ManageAccount
 from chatBot import Greeting
 from chatBot import Weather
 from chatBot import Time
+from chatBot import Message
 from nltk import word_tokenize
-
 import random
-
 while True:
     userInput = input(">>> ")
     cleaned_input = word_tokenize(userInput)
@@ -16,7 +15,6 @@ while True:
     elif not set(cleaned_input).isdisjoint(Greeting.questionHoliday):
         print(random.choice(Greeting.responsesHoliday))
     elif not set(cleaned_input).isdisjoint(Greeting.questionRegister):
-
         print("=========REGISTER=========")
         userName = input("Enter your Username:")
         password = input("Enter your password:")
@@ -24,8 +22,8 @@ while True:
         age = input("How old are you:")
         weight = float(input("please enter your weight(kg):"))
         height = float(input("please enter your height:"))
-
         member = ManageAccount(userName, password, gander, age, weight, height)
+        print("registration was successful")
         print("==============your detail==============")
         print('username:', member.username)
         print('gander:', member.gander)
@@ -33,10 +31,15 @@ while True:
         print('weight:', member.weight)
         print('height:', member.height)
         print("=======================================")
+        messageAPI=input("Would you like to receive more relevant information via SMS?(yes/no)")
+        if messageAPI=="yes":
+            Message.fun()
+        else:
+            pass
         res = input("Do you want to calculate your BMI and your health condition(yes/no):")
         if res == "yes":
             print("Your health result")
-            BMI=BMIdemo.calBMI()
+            BMI=BMIdemo.calBMI(member.weight,member.height)
             print("BMI:", BMI)
             print(BMIdemo.fun(BMI))
             print("=======================================")
@@ -56,6 +59,5 @@ while True:
     elif userInput=="bye" or userInput=="no":
         print("Thank you for using it.Have a good day")
         break
-
     else:
         print("Sorry, I don't understand.")

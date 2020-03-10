@@ -8,6 +8,7 @@ questionLogin=["login","Login","log in","Log in","sing in", "Sing in", "Sing"]
 questionWeather=["weather","Weather"]
 questionTime=["Time","time"]
 
+
     # 机器人跑起来
 
     # while True:
