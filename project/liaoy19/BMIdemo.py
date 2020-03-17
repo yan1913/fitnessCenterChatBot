@@ -1,5 +1,3 @@
-from chatBot import Register
-
 def fun(BMI):
     if BMI < 15:
         return "Very severely underweight"
@@ -23,14 +21,3 @@ def calBMI(weight,height ):
     BMI = weight / (height * height)
     return BMI
 
-
-
-
-
-# while True:
-#     height = float(input("Enter your height(meter):"))
-#     weight = float(input("Enter your weight(kg):"))
-#     BMI = float(calBMI(height, weight))
-#     print("BMI:",BMI)
-#     print(fun(BMI))
-#     print("============================================")

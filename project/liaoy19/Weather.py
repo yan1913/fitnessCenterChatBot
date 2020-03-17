@@ -1,4 +1,6 @@
-import requests,json
+import requests
+
+
 def searchWeather():
     api_key = "31e1042179ae0d0eb31d8206956574e1"
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -23,5 +25,3 @@ def searchWeather():
               str(weather_description))
     else:
         print(" City Not Found ")
-
-

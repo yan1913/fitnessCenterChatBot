@@ -1,4 +1,5 @@
-from chatBot import Password
+# from project.liaoy19 import Password
+from project.auh8Chatbot import PasswordCondition
 
 class ManageAccount:
     def __init__(self, userName, password, gander, age, weight, height):
@@ -8,6 +9,7 @@ class ManageAccount:
         self.age = age
         self.weight = weight
         self.height = height
+
     # get username
     @property
     def userName(self):
@@ -24,7 +26,9 @@ class ManageAccount:
 
     @password.setter
     def password(self, password):
-        res = Password.check_password_validity(password)
+        res = PasswordCondition.check_password_validity(password)
+        # res = Password.check_password_validity(password)
+
         if res == False:
             print(res)
             rest = input("please reset the password ")
@@ -63,8 +67,3 @@ class ManageAccount:
     @height.setter
     def height(self, height):
         self._height = height
-
-
-
-
-

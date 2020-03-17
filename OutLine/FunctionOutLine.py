@@ -24,7 +24,8 @@ def calBMI():
     return
 
 
-def fitnessSuggestion(BMI,):
+def fitnessSuggestion(BMI):
+
     # costumer can get the personal fitnessSuggestion from this function
     return
 
@@ -36,5 +37,3 @@ def groupExerciseClasses():
 
 def bookPhysiotherapy():
     return
-
-BMI=calBMI()

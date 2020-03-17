@@ -1,0 +1,11 @@
+greetings = ['hola', 'hello', 'hi', 'Hi', 'hey!', 'hey']
+greetingAns = ["Hi there, cam I help you?", "May I help you?", "Do you need any help?", "What I can do for you?"]
+questionHoliday = ['break', 'holiday', 'vacation', 'weekend']
+responsesHoliday = ['It was nice! I went to Paris', "Sadly, I just stayed at home", ]
+questionRegister = ["new user","Register","register", "join in","new member"]
+questionSuggestion=["fitness suggestion","Fitness suggestion","advice","suggestion","health suggestion"]
+questionLogin=["login","Login","log in","Log in","sing in", "Sing in", "Sing"]
+questionWeather=["weather","Weather"]
+questionTime=["Time","time"]
+questionGoogleMapAPI=["map","address","far","where","Where"]
+
