@@ -23,6 +23,6 @@ def groupExerciseClasses(gender):
 def runFun():
     while True:
         gender = input("PLEASE ENTER YOUR GENDER(if you wanna quit,please enter No):")
-        print(groupExerciseClasses(gender))
+        groupExerciseClasses(gender)
         if gender == "No":
             break

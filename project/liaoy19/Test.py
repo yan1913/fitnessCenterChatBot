@@ -9,6 +9,7 @@ from project.sondeo import groupexercises
 import random
 
 while True:
+
     userInput = input(">>> ")
     cleaned_input = word_tokenize(userInput)
     if not set(cleaned_input).isdisjoint(Greeting.greetings):  # Greeting function
@@ -51,12 +52,18 @@ while True:
             print(random.choice(Greeting.greetingAns))
         else:
             print(random.choice(Greeting.greetingAns))
+        res1 = input("Do you want get some information about the class or group exercises?(yes/no)")
+        if res1.lower() == "yes":
+            fitness.fitness_classes()
+            groupexercises.groupExerciseClasses(gander)
+        else:
+            print(random.choice(Greeting.greetingAns))
 
-    elif not set(cleaned_input).isdisjoint(Greeting.questionSuggestion): # the fitness suggestion.
+    elif not set(cleaned_input).isdisjoint(Greeting.questionSuggestion):  # the fitness suggestion.
 
         print("RUN THE FITNESS SUGGESTION FUNCTION RIGHT HERE")
 
-    elif not set(cleaned_input).isdisjoint(Greeting.questionWeather): # get weather information
+    elif not set(cleaned_input).isdisjoint(Greeting.questionWeather):  # get weather information
         Weather.searchWeather()
 
     elif not set(cleaned_input).isdisjoint(Greeting.questionGoogleMapAPI):
@@ -68,12 +75,30 @@ while True:
         Time.localTime()
 
     elif not set(cleaned_input).isdisjoint(Greeting.questionLogin):
-        loginStatus=memberLogin.isMember()
+        state = memberLogin.isMember()
+        res1 = input("Do you want get some information about the class or group exercises?(yes/no)")
+        if res1.lower() == "yes":
+            fitness.fitness_classes()
+            groupexercises.groupExerciseClasses()
+        else:
+            print(random.choice(Greeting.greetingAns))
         # login function
+
     elif not set(cleaned_input).isdisjoint(Greeting.questionClass):
-        fitness.fitness_classes()
+        temp = input("sorry, you need login at first(Press 'return' to be continue)")
+        state= memberLogin.isMember()
+        if state == True:
+            fitness.fitness_classes()
+        else:
+            print("Please try typing 'register'")
 
     elif not set(cleaned_input).isdisjoint(Greeting.questionGroup):
+        temp = input("sorry, you need login at first")
+        state = memberLogin.isMember()
+        if state == True:
+            groupexercises.runFun()
+        else:
+            print("Please try typing 'login'")
         groupexercises.runFun()
 
     elif userInput == "bye" or userInput == "no":
@@ -81,4 +106,3 @@ while True:
         break
     else:
         print("Sorry, I don't understand.")
-
