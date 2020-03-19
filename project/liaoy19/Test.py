@@ -3,6 +3,8 @@ from project.auh8Chatbot import memberLogin
 from project.liaoy19.Register import ManageAccount
 from project.liaoy19 import Time, Greeting, Weather, Message, BMIdemo
 from nltk import word_tokenize
+from project.moham977 import fitness
+from project.sondeo import groupexercises
 
 import random
 
@@ -32,14 +34,12 @@ while True:
         print('weight:', member.weight)
         print('height:', member.height)
         print("=======================================")
-
         messageAPI = input("Would you like to receive more relevant information via SMS?(yes/no)")  # Send
         # the"registers the success" confirmation message and get the root of phone number information
         if messageAPI == "yes":
             Message.fun()
         else:
             pass
-
         res = input("Do you want to calculate your BMI and your health condition(yes/no):")
         # get the BMI value and fitness suggestion
         if res == "yes":
@@ -70,9 +70,15 @@ while True:
     elif not set(cleaned_input).isdisjoint(Greeting.questionLogin):
         loginStatus=memberLogin.isMember()
         # login function
+    elif not set(cleaned_input).isdisjoint(Greeting.questionClass):
+        fitness.fitness_classes()
+
+    elif not set(cleaned_input).isdisjoint(Greeting.questionGroup):
+        groupexercises.runFun()
 
     elif userInput == "bye" or userInput == "no":
         print("Thank you for using it.Have a good day")
         break
     else:
         print("Sorry, I don't understand.")
+

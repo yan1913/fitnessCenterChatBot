@@ -8,4 +8,5 @@ questionLogin=["login","Login","log in","Log in","sing in", "Sing in", "Sing"]
 questionWeather=["weather","Weather"]
 questionTime=["Time","time"]
 questionGoogleMapAPI=["map","address","far","where","Where"]
-
+questionClass=["class","Class","Course","course","courses","Classes","classes"]
+questionGroup=["group","Group","Groups"]
