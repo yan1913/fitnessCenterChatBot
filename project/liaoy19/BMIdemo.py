@@ -1,4 +1,3 @@
-#  The following code about the details of the BMI if from:https://en.wikipedia.org/wiki/Body_mass_index
 def fun(BMI):
     if BMI < 15:
         return "Very severely underweight"
@@ -16,7 +15,6 @@ def fun(BMI):
         return "Obese Class II (Severely obese)	"
     else:
         return "Obese Class III (Very severely obese)	"
-#  The end code about the details of the BMI if from:https://en.wikipedia.org/wiki/Body_mass_index
 
 
 def calBMI(weight,height ):

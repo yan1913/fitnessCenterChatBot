@@ -2,6 +2,7 @@ from project.auh8Chatbot import API
 from project.auh8Chatbot import memberLogin
 from project.liaoy19.Register import ManageAccount
 from project.liaoy19 import Time, Greeting, Weather, Message, BMIdemo
+#The NLTK tool is learnd from:https://www.nltk.org/
 from nltk import word_tokenize
 from project.moham977 import fitness
 from project.sondeo import groupexercises
@@ -12,6 +13,7 @@ while True:
 
     userInput = input(">>> ")
     cleaned_input = word_tokenize(userInput)
+    # I learned the grammar of use NLTK from the NLTK tutorial:www.nltk.org/
     if not set(cleaned_input).isdisjoint(Greeting.greetings):  # Greeting function
         print(random.choice(Greeting.greetingAns))
 

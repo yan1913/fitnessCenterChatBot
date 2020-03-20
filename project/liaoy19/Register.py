@@ -1,4 +1,3 @@
-# from project.liaoy19 import Password
 from project.auh8Chatbot import PasswordCondition
 
 class ManageAccount:
@@ -27,7 +26,6 @@ class ManageAccount:
     @password.setter
     def password(self, password):
         res = PasswordCondition.check_password_validity(password)
-        # res = Password.check_password_validity(password)
 
         if res == False:
             print(res)
