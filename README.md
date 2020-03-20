@@ -9,6 +9,8 @@ You can check it out in this link:https://github.coventry.ac.uk/liaoy19/fitnessC
 Describes how to run the readme.me file in the project directory subdirectory liaoy19 folder in the [readm.md](https://github.coventry.ac.uk/liaoy19/fitnessCenterChatBot/blob/master/project/liaoy19/README.md) folder
 You can check it out in this link:https://github.coventry.ac.uk/liaoy19/fitnessCenterChatBot/blob/master/project/liaoy19/README.md
 
+Please "project", and then click "liaoy19", you will see the final prototype "test.py" and instruction of this program "readm.md", please read the intruction first and then proceed to our work. Thank you very much
+
 
 
 
