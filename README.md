@@ -7,7 +7,6 @@ The main run file for the team project is [test.py](https://github.coventry.ac.u
 You can check it out in this link:https://github.coventry.ac.uk/liaoy19/fitnessCenterChatBot/blob/master/project/liaoy19/Test.py
 
 Describes how to run the readme.me file in the project directory subdirectory liaoy19 folder in the [readm.md](https://github.coventry.ac.uk/liaoy19/fitnessCenterChatBot/blob/master/project/liaoy19/README.md) folder
-
 You can check it out in this link:https://github.coventry.ac.uk/liaoy19/fitnessCenterChatBot/blob/master/project/liaoy19/README.md
 
 
