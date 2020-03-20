@@ -30,7 +30,8 @@ def check_User_Info(user_input1, user_input2):
                 member_index = userID.index(user_input1)
 
                 if user_input2 == UserPassword[member_index]:
-                    print("welcome!")
+                    member_name = Name[member_index]
+                    print("welcome!",member_name)
                     return True
                 else:
                     print("your password or UserID is not valid, please try again")
